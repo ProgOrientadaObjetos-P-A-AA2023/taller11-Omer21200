@@ -12,7 +12,7 @@ import paquete0.Menu;
 import paquete0.MenuCarta;
 import paquete0.MenuDia;
 import paquete0.MenuEconomico;
-import paquete0.MenuNinos;
+import paquete0.MenuNinios;
 
 /**
  *
@@ -28,11 +28,11 @@ public class Ejecutor01 {
 
         List<Menu> listaMenu = new ArrayList<>();
 
-        MenuNinos ninos =  new MenuNinos(1, 1.5, "Niños 01",2);
+        MenuNinios ninos =  new MenuNinios(1, 1.5, "Niños 01",2);
         ninos.calcularValorMenu();
         listaMenu.add(ninos);
 
-        MenuNinos menuNinios02 = new MenuNinos(1, 1.5, "Niños 02",3);
+        MenuNinios menuNinios02 = new MenuNinios(1, 1.5, "Niños 02",3);
         menuNinios02.calcularValorMenu();
         listaMenu.add(menuNinios02);
 

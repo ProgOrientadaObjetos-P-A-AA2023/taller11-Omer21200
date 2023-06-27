@@ -11,7 +11,7 @@ import paquete0.Menu;
 import paquete0.MenuCarta;
 import paquete0.MenuDia;
 import paquete0.MenuEconomico;
-import paquete0.MenuNinos;
+import paquete0.MenuNinios;
 
 /**
  *
@@ -80,8 +80,8 @@ public class Ejecutor02 {
                         break;
                 }
             }
-            MenuNinos menuNinios
-                    = new MenuNinos(valHelado, valPastel,
+            MenuNinios menuNinios
+                    = new MenuNinios(valHelado, valPastel,
                             nombrePlato, vInicial);
             listaMenu.add(menuNinios);
         }

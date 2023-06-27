@@ -11,14 +11,14 @@ package paquete0;
 public class MenuCarta extends Menu{
      private double valorGuarnicion;
     private double valorBebida;
-    private double porcentajeAdd;
+    private double porcentajeAgre;
     
     public MenuCarta(double valorG, double valorB, double porA,
             String nomPlat, double valInM) {
         super(nomPlat, valInM);
         valorGuarnicion = valorG;
         valorBebida = valorB;
-        porcentajeAdd = porA;
+        porcentajeAgre = porA;
     }
 
     public void establecerValorGuarnicion(double valorG) {
@@ -29,8 +29,8 @@ public class MenuCarta extends Menu{
         valorBebida = valorB;
     }
     
-     public void establecerPorcentajeAdd(double porA) {
-        porcentajeAdd = porA;
+     public void establecerPorcentajeAgre(double porA) {
+        porcentajeAgre = porA;
     }
     
     public double obtenerValorGuarnicion() {
@@ -39,7 +39,7 @@ public class MenuCarta extends Menu{
     
         @Override
      public void calcularValorMenu() {
-        double aux = (valorI * porcentajeAdd)/100;
+        double aux = (valorI * porcentajeAgre)/100;
         valorM = valorI + valorBebida + valorGuarnicion + aux;
     }
      
@@ -47,8 +47,8 @@ public class MenuCarta extends Menu{
         return valorBebida;
     }
     
-    public double obtenerPorcentajeAdd() {
-        return porcentajeAdd;
+    public double obtenerPorcentajeAgre() {
+        return porcentajeAgre;
     }
     
     @Override
@@ -63,7 +63,7 @@ public class MenuCarta extends Menu{
                 valorI,
                 valorGuarnicion,
                 valorBebida,
-                porcentajeAdd,
+                porcentajeAgre,
                 valorM);
         return Cadena;
     }
