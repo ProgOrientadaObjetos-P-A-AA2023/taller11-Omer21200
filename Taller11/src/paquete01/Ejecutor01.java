@@ -5,6 +5,15 @@
  */
 package paquete01;
 
+import java.util.ArrayList;
+import java.util.List;
+import paquete0.Cuenta;
+import paquete0.Menu;
+import paquete0.MenuCarta;
+import paquete0.MenuDia;
+import paquete0.MenuEconomico;
+import paquete0.MenuNinos;
+
 /**
  *
  * @author reroes
@@ -15,7 +24,36 @@ public class Ejecutor01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO code application logic hereList<Menu> lista = new ArrayList<>();
+
+        List<Menu> listaMenu = new ArrayList<>();
+
+        MenuNinos ninos =  new MenuNinos(1, 1.5, "Niños 01",2);
+        ninos.calcularValorMenu();
+        listaMenu.add(ninos);
+
+        MenuNinos menuNinios02 = new MenuNinos(1, 1.5, "Niños 02",3);
+        menuNinios02.calcularValorMenu();
+        listaMenu.add(menuNinios02);
+
+        MenuEconomico econ = new MenuEconomico(25, "Econo 001", 4);
+        econ.calcularValorMenu();
+        listaMenu.add(econ);
+
+        MenuDia dia = new MenuDia(1, 1, "Dia 001", 5);
+        dia.calcularValorMenu();
+        listaMenu.add(dia);
+
+        MenuCarta carta =new MenuCarta(1.5, 2, 10, "Carta001",
+                        6);
+        carta.calcularValorMenu();
+        listaMenu.add(carta);
+
+        Cuenta cuenta = new Cuenta("René Elizalde", listaMenu, 10);
+        cuenta.calcularValorSubtotal();
+        cuenta.calcularValorTotal();
+
+        System.out.println(cuenta);
     }
     
     
